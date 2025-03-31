@@ -1,5 +1,5 @@
 FROM ubuntu:20.04
-LABEL dev="Rajatz"
+LABEL dev="Ishika"
 
 # Install necessary packages
 RUN apt-get update && \
