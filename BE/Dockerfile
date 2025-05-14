@@ -6,7 +6,7 @@ RUN apt-get update && \
     apt-get install -y wget unzip openjdk-11-jdk
 
 # Define Tomcat version
-ENV TOMCAT_VERSION=9.0.100
+ENV TOMCAT_VERSION=9.0.105
 ENV TOMCAT_URL=https://dlcdn.apache.org/tomcat/tomcat-9/v${TOMCAT_VERSION}/bin/apache-tomcat-${TOMCAT_VERSION}.zip
 
 # Download and extract Tomcat
