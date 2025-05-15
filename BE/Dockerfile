@@ -24,6 +24,6 @@ COPY context.xml /opt/apache-tomcat-${TOMCAT_VERSION}/conf/context.xml
 # Set permissions and run Tomcat
 RUN chmod +rwx /opt/apache-tomcat-${TOMCAT_VERSION}/bin/catalina.sh
 
-CMD ["/opt/apache-tomcat-9.0.100/bin/catalina.sh", "run"]
+CMD ["/opt/apache-tomcat-9.0.105/bin/catalina.sh", "run"]
 
 EXPOSE 8080
