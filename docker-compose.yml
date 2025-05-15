@@ -9,6 +9,7 @@ services:
       MYSQL_USERNAME: admin
       MYSQL_ROOT_PASSWORD: admin1234
       ENTRYPOINT: database-1.c10uu86mstml.eu-north-1.rds.amazonaws.com
+      MYSQL_DATABASE: studentapp
     volumes:
       - mysql_data:/var/lib/mysql
       - ./init.sql:/docker-entrypoint-initdb.d/init.sql
