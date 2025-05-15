@@ -2,14 +2,17 @@ FROM mysql:latest
 
 LABEL database="studentapp"
 
-ENV MYSQL_USERNAME="admin"
-    MYSQL_ROOT_PASSWORD="admin1234"
-    ENTRYPOINT="database-1.c10uu86mstml.eu-north-1.rds.amazonaws.com"
+# Environment variables for MySQL image
+ENV MYSQL_ROOT_PASSWORD=admin1234 \
+    MYSQL_USER=admin \
+    MYSQL_PASSWORD=admin1234 \
+    MYSQL_DATABASE=studentapp
 
-CMD mysql -h ${ENTRYPOINT} -U ${MYSQL_USERNAME} -p${MYSQL_ROOT_PASSWORD}
-
+# Initialization script
 COPY init-db.sql /docker-entrypoint-initdb.d/
 
+# Expose MySQL port
 EXPOSE 3306
 
+# Start the MySQL server (handled by base image)
 CMD ["mysqld"]
